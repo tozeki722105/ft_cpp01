@@ -13,4 +13,6 @@ int main()
 	int horde_num = 5;
 	Zombie *horde = zombieHorde(horde_num, "zombiee");
 	announceHorde(horde, horde_num);
+	if (horde)
+		delete[] horde;
 }
