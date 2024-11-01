@@ -2,12 +2,11 @@
 
 int main()
 {
-	Harl harl;
+	Harl        harl;
 	std::string input;
 
 	std::cout << "Enter level : ";
-	while ((std::getline(std::cin, input)))
-	{
+	while ((std::getline(std::cin, input))) {
 		harl.complain(input);
 		std::cout << "Enter level : ";
 	}

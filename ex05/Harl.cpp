@@ -22,13 +22,13 @@ void Harl::error(void)
 
 void Harl::complain(std::string level)
 {
-	std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	std::string   levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	MemberFuncPtr funcs[] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-	
-	for (size_t i = 0; i < this->level_count; i++){
-		if (level == levels[i]){
+
+	for (size_t i = 0; i < this->level_count; i++) {
+		if (level == levels[i]) {
 			(this->*funcs[i])();
-			return ;
+			return;
 		}
 	}
 	std::cerr << "InValid level" << std::endl;
