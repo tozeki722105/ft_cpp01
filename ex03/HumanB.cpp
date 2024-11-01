@@ -1,9 +1,13 @@
 #include "HumanB.hpp"
 
-void HumanB::attack()
+HumanB::HumanB(const std::string &n, Weapon *init_wp) : name(n), weapon(init_wp) {};
+
+HumanB::~HumanB() {}
+
+void HumanB::attack() const
 {
 	if (this->weapon == nullptr)
-    	return;
+		return;
 	std::cout << this->name << " attacks with their " << weapon->getType() << std::endl;
 }
 
