@@ -17,10 +17,13 @@ std::string convert(std::string &content, const std::string &old_str, const std:
 
 int main(int argc, char **argv)
 {
-	if (argc != 4)
+	if (argc != 4){
+		std::cerr << "Invalid argments" << std::endl;
 		return 1;
+	}
+		
 	std::ifstream ifs(argv[1]);
-	std::ofstream ofs(std::string(argv[1]) + ".replace");
+	std::ofstream ofs((std::string(argv[1]) + ".replace").c_str());
 	if (!ifs || !ofs) {
 		std::cerr << "Error opening file." << std::endl;
 		return 1;

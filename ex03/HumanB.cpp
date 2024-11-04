@@ -6,8 +6,10 @@ HumanB::~HumanB() {}
 
 void HumanB::attack() const
 {
-	if (this->weapon == nullptr)
-		return;
+	if (this->weapon == NULL){
+		std::cout << this->name << " don't have a weapon" << std::endl;
+		return ;
+	}		
 	std::cout << this->name << " attacks with their " << weapon->getType() << std::endl;
 }
 
