@@ -9,7 +9,7 @@
 class HumanB
 {
 public:
-	HumanB(const std::string &n, Weapon *init_wp = nullptr);
+	HumanB(const std::string &n, Weapon *init_wp = NULL);
 	~HumanB();
 	void attack() const;
 	void setWeapon(Weapon &wp);
